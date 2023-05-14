@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exmouth View Hotel, Babbacombe Hotel, Family Friendly Babbacombe Torquay
+	Hotels. A Family Owned and Run, Family Friendly Favourite Hotel, Self Drive
+	Staycation Hotel, Children Welcome in Babbacombe Torquay, Fawlty Towers
+	Re-Opened, Affordable Accomodation</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="refresh" content="30">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Lora:wght@600;700&family=Poppins&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="stylesheet.css">
+
+</head>
+<body>
+	<nav>
+		<a href="index.html"><img id="logo-nav" src="images/ExmouthHotel-logo4.png" alt="Exmouth View Hotel logo"></a>
+		<input type="checkbox" id="nav" class="hidden"/>
+		<label for="nav" class="nav-open"><i></i><i></i><i></i></label>
+		<div class="nav-container">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="ourhotel.html">Our Hotel</a></li>
+				<li><a href="tourquay.html">Our Town</a></li>
+				<li><a href="attractions.html">Attractions</a></li>
+				<li><a href="#">Rooms</a></li>
+				<li><a href="#">Reservations</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<header>
+		<a href="index.html"><img id="logo" src="images/ExmouthHotel-logo4.png" alt="Exmouth View Hotel logo"></a>
+		<img src="images/beach-header.jpeg" alt="Sunset beach">
+	</header>
+
+
+	<main>
+		<h2>Our Town</h2>
+		<h3>Torquay Before and After</h3>
+		<p>The three seaside towns of Torquay, Paignton and Brixham are the resorts known collectively as Torbay, or The English Riviera, and they nestle in a sheltered, east facing bay (Tor Bay) in south Devon, in the south west of England.</p>
+		<p>Torquay had small beginnings. In 1800, the population of this fishing village numbered less than 1,000. During the Napoleonic Wars however, Torquay, protected from the worst of the weather by the surrounding hills was the favoured port for shelter during the Channel gales and it served as a victualling and supply centre.</p>
+
+		<p>Later in the last century, the wealthy sick started making their way to Torquay. They came to the area because the air was at least warm. By the 1840's the population had reached 10,000. Once the railway came to Torquay in 1848, the population increased even more.</p>
+
+		<p>Torquay is a cheerful place, epitomised by the colourful lights which go right around the bay. They're on all year round and it lends a bit of cheer, especially when you see them in January. The town area is quite spread out and occupies a rock promontory which divides Babbacombe Bay from Tor Bay.</p>
+		<hr>
+
+		<h3>Torquay Attractions</h3>
+		<div>
+			<p>With its stunning seafront, stylish marina and beautiful beaches meandering the length of this beautiful South Devon town, Torquay is noted for its huge range of year-round activities. Part of the glorious UNESCO accredited English Riviera Global Geopark, it’s a perfect haven for families with tiny tots or teenagers, singles with a taste for adventure, couples looking for romance or experienced travellers looking for something new.</p>
+			<img src="images/torquay.jpeg" alt="torquay at night">
+		</div>
+
+		<button class="accordion">Torquay Museum</button>
+		<div class="panel">
+			<h3>Torquay Museum</h3>
+		  <p>Just up the road from the harbour as you go towards Babbacombe, the Museum has six galleries including an Archaeological Gallery with exhibits including a fragment of the oldest human remains found in Britain. There's also an Agatha Christie exhibition with displays of photographs, newspaper cuttings, books and other memorabilia tracing her life and work.</p>
+
+			<img src="images/torquay-museum.jpg" alt="Torquay museum">
+
+			<p>For more information about prices, open times and updates, please visit the official website: </p>
+			<a href="http://www.torquaymuseum.org/" target="_blank"><button class="btn info" type="button">Torquay Museum Website</button></a>
+		</div>
+
+		<button class="accordion">Babbacombe</button>
+		<div class="panel">
+			<h3>Babbacombe</h3>
+		  <p>Babbacombe, high on the wooded cliffs facing north east is a couple of miles from the centre of Torquay and offers some spectacular views of the red sandstone cliffs and the coastline below. From here you can get to several small sandy coves by going down steep cliffside roads, or in the case of Oddicombe Beach, by the cliff railway. Babbacombe, together with the neighbouring village of St Marychurch is a very pleasant part of Torquay with plenty of attractions on the doorstep.</p>
+
+			<img src="images/copy-of-babbacombe_bay.jpg" alt="Babbacombe Beach">
+
+			<p>More information in our Local Attractions page: </p>
+
+			<a href="attractions.html" target="_blank"><button class="btn info" type="button">Local Attractions</button></a>
+
+		</div>
+
+		<button class="accordion">Cockington Village</button>
+		<div class="panel">
+			<h3>Cockington Village</h3>
+		  <p>At the other end is the quaint village of Cockington, a mile back from the seashore (you can go there by horse and trap if you like). This is surprisingly unspoilt with thatched roofed cottages in a woodland setting. Time seems to have passed by on the main road between the two busiest resorts on the Devon coast and left Cockington alone. See England as it used to be.</p>
+			<div class="grid-pictures">
+				<img src="images/cockington1.jpg" alt="Cockington Village landscape">
+				<img src="images/cockington2.jpg" alt="Cockington Village horse ride">
+			</div>
+		</div>
+
+		<script>
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+		  acc[i].addEventListener("click", function() {
+		    this.classList.toggle("active");
+		    var panel = this.nextElementSibling;
+		    if (panel.style.maxHeight) {
+		      panel.style.maxHeight = null;
+		    } else {
+		      panel.style.maxHeight = panel.scrollHeight + "px";
+		    }
+		  });
+		}
+		</script>
+	</main>
+
+	<aside>
+		<h2>Spring Deals</h2>
+
+		<div>
+			<h3><a href="#">Wine and Dine</a></h3>
+			<p>1 Night Package for 2 People £111, including evening Dinner + A Free bottle of wine. Overnight stay in a Double or Twin Room full Devon Breakfast</p>
+			<a href="#"><img src="images/wine-dinner-deal.jpeg" alt="Wine dinner deal"></a>
+
+		<div>
+			<h3><a href="#">Spring Escape</a></h3>
+			<p>3 Night Weekend Package for 2 People £270. Arriving Friday afternoon and	departing Monday morning. Evening dinner and full Devon Breakfast each morning for a Double and Twin accomodation</p>
+			<a href="#"><img src="images/spring-deal.jpeg" alt="spring deal"></a>
+		</div>
+		<a href="#"><button class="btn info" type="button">Check more deals</button></a>
+	</aside>
+
+	<footer>
+		<a href="index.html"><img id="logo-footer" src="images/ExmouthHotel-logo4.png" alt="Hotel logo"></a>
+		<div id="footer-menu">
+			<ul>
+				<li><a href="#">Contact Us</a></li>
+				<li><a href="#">Privacy Policy</a></li>
+				<li><a href="#">Terms of Use</a></li>
+			</ul>
+		</div>
+		<p>Copyright &copy2022 Exmouth View Hotel</p>
+	</footer>
+</body>
+</html>

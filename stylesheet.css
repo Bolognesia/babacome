@@ -1,0 +1,535 @@
+/* DEFAULTS */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, a, article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section {
+/* Cancel out some differences between browser defaults */
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+/* Apply a natural box layout model to all elements, but allowing components to change it.
+ */
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+ul, ol {
+	list-style-position: inside;
+}
+
+nav ul, footer ul {
+	list-style-type: none;
+}
+
+/* TYPOGRAPHY */
+
+body {
+	line-height: 1.5;
+	font-family:'Poppins', Arial, sans-serif;
+}
+
+
+h1, h2, h3, h4 {
+	font-family: 'Lora', serif;
+}
+
+h1 a, h2 a, h3 a, h4 a{
+	text-decoration: none;
+	color: black;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+}
+
+
+/* LAYOUT */
+
+p {
+    margin: 0 0 1em 0;
+}
+
+main, aside{
+	padding: 1.5em 2em;
+}
+
+main > div{
+	padding-bottom: 1em;
+}
+
+main ul{
+	padding-left: 2em;
+	padding-bottom: 1em;
+}
+
+/*ACCORDION MENU*/
+.accordion {
+  background-color: #EDE6DB;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1em;
+  transition: 0.3s;
+}
+
+.active, .accordion:hover {
+  background-color: #071429;
+  color: #EDE6DB;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: black;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+  color: white;
+}
+
+.panel {
+  padding: 0 1em;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.panel a{
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+
+/* BUTTONS */
+
+.btn {
+	border: 2.5px solid black;
+	background-color: white;
+	color: black;
+	padding: 1em 2em;
+	font-size: 1.2em;
+	cursor: pointer;
+}
+
+/* Blue */
+.info {
+  border-color: #071429;
+  color: #071429;
+}
+
+.info:hover {
+  background: #071429;
+  color: #EDE6DB;
+}
+
+.buttons{
+	display: grid;
+	grid-template-columns: auto auto
+}
+
+.buttons a{
+	padding-bottom: 0.5em;
+}
+
+/* IMAGES */
+
+img {
+	width: 100%;
+}
+
+#logo{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#footer-logo{
+	width: 80%;
+	padding-left: 1em;
+}
+
+.grid-pictures img{
+  padding-bottom: 1.5em;
+}
+
+header img{
+	display: none;
+}
+
+
+/* COLOUR SCHEME */
+
+header, footer{
+	background-color: #071429;
+}
+
+aside{
+	background-color: #EDE6DB;
+	margin: 0 2em 1em;
+}
+
+header{
+	border-bottom: 0.3em solid #1DA5C8;
+}
+
+/* MOBILE MENU */
+
+* {
+  box-sizing: border-box;
+}
+
+#logo-nav{
+	display: none;
+}
+nav ul {
+  float: right;
+}
+
+nav ul li {
+  display: inline-block;
+  float: left;
+}
+
+nav ul li:not(:first-child) {
+  margin-left: 25px;
+}
+
+nav ul li a {
+  display: inline-block;
+  outline: none;
+  color: #1f2227;
+  font-size: 1.5em;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+
+nav ul li a:hover {
+  color: #EF6C24;
+  text-decoration: none;
+}
+
+
+#nav:checked + .nav-open {
+  transform: rotate(45deg);
+}
+#nav:checked + .nav-open i {
+  background: black;
+  transition: transform 0.2s ease;
+}
+
+#nav:checked + .nav-open i:nth-child(1) {
+  transform: translateY(6px) rotate(180deg);
+}
+
+#nav:checked + .nav-open i:nth-child(2) {
+  opacity: 0;
+}
+
+#nav:checked + .nav-open i:nth-child(3) {
+  transform: translateY(-6px) rotate(90deg);
+}
+
+#nav:checked ~ .nav-container {
+  z-index: 9990;
+  opacity: 1;
+}
+
+#nav:checked ~ .nav-container ul li a {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hidden {
+  display: none;
+}
+
+/* ASIDE LAYOUT */
+aside div{
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+
+/*FOOTER LAYOUT*/
+
+footer{
+	border-top: 0.3em solid #1DA5C8;
+}
+
+footer{
+	display: grid;
+	grid-template-columns: 1fr auto auto 1fr;
+}
+
+#footer-menu{
+	grid-column: 3 / 5;
+	padding: 3em;
+	font-size: 1em;
+}
+
+footer p{
+	grid-column: 3 / 5;
+	text-align: right;
+	font-size: 0.7em;
+	color: #EDE6DB;
+	padding: 1em;
+}
+
+#footer-menu li{
+	padding: 0.3em;
+}
+
+footer ul li a:hover{
+	color: #EF6C24 ;
+}
+
+footer a{
+	text-decoration: none;
+	color: #EDE6DB;
+}
+
+
+@media screen and (max-width: 70rem) {
+
+	.nav-container {
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		z-index: -1;
+		background: #EDE6DB;
+		opacity: 0;
+		transition: all 0.2s ease;
+	}
+
+	.nav-container ul {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 100%;
+	}
+
+	.nav-container ul li {
+		display: block;
+		float: none;
+		width: 100%;
+		text-align: right;
+		margin-bottom: 10px;
+	}
+
+	.nav-container ul li:nth-child(1) a {
+		transition-delay: 0.2s;
+	}
+
+	.nav-container ul li:nth-child(2) a {
+		transition-delay: 0.3s;
+	}
+
+	.nav-container ul li:nth-child(3) a {
+		transition-delay: 0.4s;
+	}
+
+	.nav-container ul li:nth-child(4) a {
+		transition-delay: 0.5s;
+	}
+
+	.nav-container ul li:nth-child(5) a {
+		transition-delay: 0.6s;
+	}
+
+	.nav-container ul li:not(:first-child) {
+		margin-left: 0;
+	}
+	.nav-container ul li a {
+		padding: 10px 25px;
+		opacity: 0;
+		color: #071429;
+		font-size: 1.75em;
+		font-weight: 600;
+		transform: translateY(-20px);
+		transition: all 0.2s ease;
+	}
+	.nav-open {
+		position: fixed;
+		right: 10px;
+		top: 10px;
+		display: block;
+		width: 48px;
+		height: 48px;
+		cursor: pointer;
+		z-index: 9999;
+		border-radius: 50%;
+	}
+	.nav-open i {
+		display: block;
+		width: 30px;
+		height: 3px;
+		background: #EDE6DB;
+		border-radius: 2px;
+		margin-left: 14px;
+	}
+	.nav-open i:nth-child(1) {
+		margin-top: 16px;
+	}
+
+	.nav-open i:nth-child(2) {
+		margin-top: 4px;
+		opacity: 1;
+	}
+	.nav-open i:nth-child(3) {
+		margin-top: 4px;
+	}
+}
+
+/*RESPONSIVENESS DESKTOP*/
+
+@media screen and (min-width: 70rem){
+
+	/*GRID LAYOUT*/
+	body{
+		display: grid;
+		grid-template-columns: 1fr 25rem 50rem 1fr;
+		grid-template-rows: auto auto auto;
+	}
+
+	header, footer, nav{
+		grid-column: 1 / 5;
+	}
+
+	aside {
+		grid-column: 2 / 3;
+		grid-row: 3 / 4;
+	}
+
+	main {
+		grid-column: 3/4;
+	}
+
+	/*NAVIGATION DESKTOP*/
+	nav{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		background-color: #071429;
+		padding-left: 1.5em;
+		padding-right: 1.5em;
+		padding-bottom: 1.5em;
+	}
+	.nav-container{
+		width: clamp(400px, 100vw, 2000px);
+		padding-top: 5em;
+	}
+	nav ul li a:hover {
+  		color: #EF6C24;
+  	}
+
+	nav ul li a{
+		color: #EDE6DB;
+	}
+
+	#logo-nav {
+		display: inline-block;
+		width: 20%;
+	}
+
+	/*HEADER DESKTOP*/
+
+	#logo{
+		display: none;
+	}
+
+	header img{
+		display: block;
+	}
+
+	/*MAIN DESKTOP*/
+	.grid-pictures{
+		display: flex;
+    justify-content: space-between;
+	}
+
+	.grid-pictures{
+		width: 50%;
+	}
+
+	.grid-pictures img{
+		padding-right: 1em;
+    padding-bottom: 1em;
+	}
+
+	.grid-pictures-4{
+		display: grid;
+		grid-template-columns: auto auto;
+		grid-template-rows: auto auto;
+	}
+
+	.grid-pictures-4 img{
+		padding: 1em;
+	}
+
+	.buttons{
+		display: flex;
+	}
+
+	.buttons a{
+		padding-right: 0.8em;
+	}
+
+	/*FOOTER DESKTOP*/
+
+  	#logo-footer {
+		padding-top: 0.8em;
+		width: 25%
+	}
+
+	#footer-menu ul{
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	#footer-menu li{
+		font-size: 1.25em;
+		padding-left: 2em;
+	}
+
+	footer{
+		margin-top: 1em;
+		padding-left: 3em;
+		padding-right: 3em;
+	}
+
+	footer p{
+		font-size: 0.94em;
+	}
+
+	aside{
+		margin: 2em 0 auto;
+	}
+}
